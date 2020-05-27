@@ -1,1 +1,0 @@
-# rocketseat-launchbase-desafios
