@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap');
+
+:root {
+  --color-rocketseat: rgb(113, 89, 193);
+  --color-launchbase: rgb(253, 149, 31);
+  --color-gostack: rgb(4, 211, 97);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #282a36;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  padding: 30px;
+  background: var(--color-rocketseat);
+}
+
+.links a {
+  margin: 0 30px;
+  color: #fff;
+  opacity: 80%;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 26px;
+  text-decoration: none;
+}
+
+.links a:hover {
+  opacity: 100%;
+  transition: 250ms;
+}
+
+/*=== ABOUT === */
+
+#wrapper {
+  text-align: center;
+  padding: 30px;
+}
+
+#wrapper img {
+  height: 250px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  border: 5px solid rgb(55, 63, 170);
+}
+
+#wrapper h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 42px;
+  line-height: 52px;
+}
+
+#wrapper h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 23px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 33px;
+  margin-bottom: 10px;
+}
+
+#wrapper p {
+  max-width: 600px;
+  margin: 0px auto;
+  line-height: 26px;
+}
+
+#wrapper p a {
+  color: darkcyan;
+  text-decoration: none;
+}
+
+#wrapper ul {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 26px;
+  list-style: inside;
+}
+
+#wrapper ul li {
+  margin: 15px;
+}
+
+#links-footer {
+  text-align: center;
+  padding: 10px;
+}
+
+#links-footer a {
+  border-bottom: 2px solid darkcyan;
+}
+
+/*=== CONTENT === */
+
+#main-content {
+  min-height: calc(100vh - 86px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://skylab.rocketseat.com.br/static/a4edba24f9a571dbb09c831694960cdf.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  background-attachment: fixed;
+}
+
+.cards {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.card {
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+.card-starter:hover {
+  border: 2px solid var(--color-rocketseat);
+}
+
+.card-lauchbase:hover {
+  border: 2px solid var(--color-launchbase);
+}
+
+.card-gostack:hover {
+  border: 2px solid var(--color-gostack);
+}
+
+.card__img-content {
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card p {
+  line-height: 26px;
+}
+
+.card p .color-starter {
+  color: var(--color-rocketseat);
+}
+
+.card p .color-launchbase {
+  color: var(--color-launchbase);
+}
+
+.card p .color-gostack {
+  color: var(--color-gostack);
+}
+
+.card__price {
+  width: 220px;
+  height: 65px;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid blanchedalmond;
+  border-radius: 12px;
+  margin: 20px auto 10px auto;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.card__price.price-starter {
+  background-color: var(--color-rocketseat);
+  border: none;
+}
+
+.card__price.price-starter:hover {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: 3px solid var(--color-rocketseat);
+  transition: 200ms;
+}
+
+.card__price.price-launchbase {
+  background-color: var(--color-launchbase);
+  border: none;
+}
+
+.card__price.price-launchbase:hover {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: 3px solid var(--color-launchbase);
+  transition: 200ms;
+}
+
+.card__price.price-gostack {
+  background-color: var(--color-gostack);
+  border: none;
+}
+
+.card__price.price-gostack:hover {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: 3px solid var(--color-gostack);
+  transition: 200ms;
+}
+
+/*=== CONTENT.MODAL ===*/
+
+.modal-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  width: 90vw;
+  height: 90vh;
+  margin: 0 auto;
+  top: 5vh;
+  position: relative;
+  background-color: #fff;
+}
+
+.modal .close-modal {
+  color: black;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  cursor: pointer;
+}
+
+/*=== MODAL.ACTIVE ===*/
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+iframe {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+}

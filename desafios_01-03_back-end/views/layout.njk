@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block header %}
+      <title>Launchbase - Rocketseat - Desafio</title>
+    {% endblock header %}
+
+    <link href="/style.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+  </head>
+  <body>
+    <nav>
+      <div class="links">
+        <a href="/">Início</a>
+        <a href="https://discordapp.com/invite/gCRAFhc" target="_blank">Comunidade</a>
+        <a href="mailto:oi@rocketseat.com.br">E-mail</a>
+        <a href="tel:que deve chamar o comando de realizar uma ligação para o número ">Telefone</a>
+        <a href="/about">Sobre</a>
+        <a href="/content">Conteúdo</a>
+      </div>
+    </nav>
+
+    {% block content %}{% endblock content %}
+
+    <script src="/app.js"></script>
+  </body>
+</html>
