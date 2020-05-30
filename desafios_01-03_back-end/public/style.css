@@ -132,7 +132,7 @@ nav {
   border: 2px solid var(--color-rocketseat);
 }
 
-.card-lauchbase:hover {
+.card-launchbase:hover {
   border: 2px solid var(--color-launchbase);
 }
 

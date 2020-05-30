@@ -9,55 +9,20 @@
 
   <main id="main-content">
     <section class="cards">
+      {% for item in items %}
 
-      <div class="card card-starter">
-        <div class="card__img-content">
-          <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="Logo curso Rocketseat Starter">
+        <div class="card card-{{ item.id }}">
+          <div class="card__img-content">
+            <img src="{{ item.url }}" alt="{{ item.url_description }}">
+          </div>
+          <div class="card__info-content">
+            <p>{{ item.info }}</p>
+          </div>
+          <div id="{{ item.id }}" class="card__price price-{{ item.id }}">
+            <p>{{ item.price }}</p>
+          </div>
         </div>
-        <div class="card__info-content">
-          <p>
-            <strong class="color-starter">Torne-se um programador desejado</strong>
-            no mercado com esses cursos.</p>
-        </div>
-        <div id="starter" class="card__price price-starter">
-          <p>
-            <strong>Free</strong>
-          </p>
-        </div>
-      </div>
-
-      <div class="card card-lauchbase">
-        <div class="card__img-content">
-          <img src="https://skylab.rocketseat.com.br/static/0828532024cb46921a6b5e941f8d788d.svg" alt="Logo curso Rocketseat LaunchBase">
-        </div>
-        <div class="card__info-content">
-          <p>
-            <strong class="color-launchbase">Domine programação do zero</strong>
-            e tenha acesso às melhores oportunidades do mercado.</p>
-        </div>
-        <div id="launchbase" class="card__price price-launchbase">
-          <p>
-            <strong>Garanta sua vaga</strong>
-            para a próxima turma</p>
-        </div>
-      </div>
-
-      <div class="card card-gostack">
-        <div class="card__img-content">
-          <img src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="Logo curso Rocketseat Starter">
-        </div>
-        <div class="card__info-content">
-          <p>
-            <strong class="color-gostack">Treinamento imersivo</strong>
-            nas tecnologias mais modernas de desenvolvimento web e mobile.</p>
-        </div>
-        <div id="gostack" class="card__price price-gostack">
-          <a>
-            <strong>Garanta sua vaga</strong>
-            para a próxima turma</a>
-        </div>
-      </div>
-
+      {% endfor %}
     </section>
 
     <section class="modal-overlay">

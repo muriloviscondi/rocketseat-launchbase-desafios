@@ -7,26 +7,22 @@
 {% block content %}
   <main>
     <section id="wrapper">
-      <img src="https://pbs.twimg.com/profile_images/953595371875422210/0pWsfSSp_400x400.jpg" alt="Logo Rocketseat">
-      <h1>Rocketseat</h1>
-      <h2>As melhores tecnologias em programação, direto ao ponto e do jeito certo.</h2>
-      <p>Imagine você dominando as mesmas tecnologias adotadas pelos melhores times do mundo, utilizando como por exemplo:</p>
+      <img src="{{ about.url_img }}" alt="{{ about.url_description }}">
+      <h1>{{ about.title }}</h1>
+      <h2>{{ about.title_description }}</h2>
+      <p>{{ about.description }}</p>
       <ul>
-        <li>Javascript</li>
-        <li>ReactJS</li>
-        <li>React Native</li>
-        <li>NodeJs</li>
+        {% for list_tech in about.list_techs %}
+          <li>{{ list_tech.name }}</li>
+        {% endfor %}
       </ul>
-      <p>Venha fazer parte dessa comunidade crescente chamada
-        <a href="https://rocketseat.com.br/">Rocketseat</a>.</p>
+      <p>{{ about.description_tech }}</p>
     </section>
 
     <section id="links-footer" class="links">
-      <a href="https://github.com/Rocketseat" target="_blank">Github</a>
-      <a href="https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg" target="_blank">YouTube</a>
-      <a href="https://www.instagram.com/rocketseat_oficial/?hl=en" target="_blank">Instagram</a>
-      <a href="https://twitter.com/rocketseat" target="_blank">Twitter</a>
-      <a href="https://www.linkedin.com/school/rocketseat" target="_blank">Linkedin</a>
+      {% for link in about.links %}
+        <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+      {% endfor %}
     </section>
   </main>
 {% endblock content %}
