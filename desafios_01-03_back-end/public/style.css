@@ -128,6 +128,11 @@ nav {
   border-radius: 12px;
 }
 
+.card a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .card-starter:hover {
   border: 2px solid var(--color-rocketseat);
 }
@@ -217,46 +222,4 @@ nav {
   background-color: transparent;
   border: 3px solid var(--color-gostack);
   transition: 200ms;
-}
-
-/*=== CONTENT.MODAL ===*/
-
-.modal-overlay {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  visibility: hidden;
-}
-
-.modal {
-  width: 90vw;
-  height: 90vh;
-  margin: 0 auto;
-  top: 5vh;
-  position: relative;
-  background-color: #fff;
-}
-
-.modal .close-modal {
-  color: black;
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  cursor: pointer;
-}
-
-/*=== MODAL.ACTIVE ===*/
-.modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-iframe {
-  width: 100%;
-  height: 90%;
-  position: absolute;
-  top: 5%;
 }

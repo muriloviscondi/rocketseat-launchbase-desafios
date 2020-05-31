@@ -10,14 +10,15 @@ server.set('view engine', 'njk')
 
 nunjucks.configure('views', {
   express: server,
-  autoescape: false
+  autoescape: false,
+  noCache: true
 })
 
-server.get('/', function (request, response) {
+server.get('/', function(request, response) {
   return response.render('home')
 })
 
-server.get('/about', function (request, response) {
+server.get('/about', function(request, response) {
   const about = {
     url_img: 'https://pbs.twimg.com/profile_images/953595371875422210/0pWsfSSp_400x400.jpg',
     url_description: 'Logo Rocketseat',
@@ -66,7 +67,7 @@ server.get('/about', function (request, response) {
   return response.render('about', { about })
 })
 
-server.get('/content', function (request, response) {
+server.get('/content', function(request, response) {
   return response.render('content', { items: courses })
 })
 

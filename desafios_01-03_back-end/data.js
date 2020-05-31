@@ -3,7 +3,7 @@ module.exports = [
     id: 'starter',
     url: 'https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg',
     url_description: 'Logo curso Rocketseat Starter',
-    info: '<strong class="color-starter">Torne-se um programador desejado</strong>no mercado com esses cursos.',
+    info: '<strong class="color-starter">Torne-se um programador desejado</strong> no mercado com esses cursos.',
     price: '<strong>Free</strong>'
   },
   {
