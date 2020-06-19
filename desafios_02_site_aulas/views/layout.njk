@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block header %}
+      <title>Private Lessons</title>
+    {% endblock header %}
+
+    <link href="/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <div class="links">
+        <a href="/" class="active">Início</a>
+        <a href="/teachers">Teachers</a>
+        <a href="/students">Students</a>
+      </div>
+    </nav>
+
+    {% block content %}{% endblock content %}
+
+    <script src="/app.js"></script>
+  </body>
+</html>
