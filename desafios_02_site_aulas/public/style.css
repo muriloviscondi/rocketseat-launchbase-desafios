@@ -144,3 +144,39 @@ nav {
   text-transform: uppercase;
   font-size: 12px;
 }
+
+/*=== CREATE ===*/
+input {
+  width: 100%;
+  outline: none;
+  color: #555;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+}
+
+input[type="radio"] {
+  width: initial;
+  margin-right: 4px;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+button[type="submit"] {
+  width: 100%;
+  margin-top: 32px;
+  padding: 8px 32px;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  background-color: rgb(14, 100, 212);
+  border-radius: 4px;  
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
